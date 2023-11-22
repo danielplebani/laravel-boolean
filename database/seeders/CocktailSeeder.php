@@ -19,12 +19,12 @@ class CocktailSeeder extends Seeder
             $new_drink = new Cocktail();
             $new_drink->name = $drink['strDrink'];
             $new_drink->category = $drink['strCategory'];
-            $new_drink->alcoholic = $drink['strAlcoholic'];
+            $new_drink->isAlcoholic = $drink['strAlcoholic'];
             $new_drink->glass = $drink['strGlass'];
-            $new_drink->instructions = $drink['strInstructions'];
+            $new_drink->instruction = $drink['strInstructions'];
             $new_drink->thumb = $drink['strDrinkThumb'];
             $new_drink->ingredients = implode(', ', $drink['ingredients']);
-            $new_drink->ingredients = implode(', ', $drink['measures']);
+            $new_drink->measures = implode(', ', $drink['measures']);
             $new_drink->save();
         }
     }
