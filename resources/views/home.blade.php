@@ -31,7 +31,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">category: {{ $drink->category }}</li>
                         <li class="list-group-item">glass: {{ $drink->glass }}</li>
-                        @if ($drink->isAlcohlic)
+                        @if ($drink->isAlcoholic)
                             <li class="list-group-item">is alcolic</li>
                         @else
                             <li class="list-group-item">is not alcolic</li>
