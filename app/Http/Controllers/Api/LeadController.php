@@ -40,7 +40,7 @@ class LeadController extends Controller
         $lead = Lead::create($request->all());
 
         // send email to my self
-        Mail::to('info@boolpress.com')->send(new NewLeadEmailMd($lead));
+        Mail::to($lead->email)->send(new NewLeadEmailMd($lead));
 
         // return a json success response
 
